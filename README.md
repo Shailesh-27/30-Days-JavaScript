@@ -1,6 +1,6 @@
 # 30 Days Of JavaScript
 
-This repo is dedicated to documenting my journey as I complete the 30 Days JavaScript Challenge inspired by the Chai or Code YouTube channel by **Hitesh Choudhary**.
+This repo contains the 30 Days JavaScript Challenge inspired by the Chai or Code YouTube channel by **Hitesh Choudhary**.
 
 ## Table of content
 
