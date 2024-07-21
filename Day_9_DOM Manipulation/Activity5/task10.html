@@ -1,0 +1,43 @@
+<!-- ************************* Event Handling ************************** -->
+
+<!-- Task 10: Add a mouseover event listener to button that changes its border color.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+    <style>
+        #myButton {
+            padding: 10px 20px;
+            border: 4px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change Border Color on Mouseover</h1>
+
+    <button id="myButton">Hover over me!</button>
+
+    <script>
+        // JavaScript to add a mouseover event listener to a button
+        const button = document.getElementById('myButton');
+
+        button.addEventListener('mouseover', function () {
+            // Change border color on mouseover
+            button.style.borderColor = 'red';
+        });
+
+        button.addEventListener('mouseout', function () {
+            // Revert border color on mouseout
+            button.style.borderColor = 'black';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!-- ************************* Removing Elements ************************** -->
+
+<!-- Task 5: Select an HTML element and remove it from the DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <h1>Remove Element from DOM Example</h1>
+
+    <div id="toBeRemoved">
+        <p>This is the element we want to remove.</p>
+    </div>
+
+    <button onclick="removeElement()">Remove Element</button>
+
+    <script>
+        function removeElement() {
+            // Step 1: Select the element to be removed
+            const elementToRemove = document.getElementById('toBeRemoved');
+
+            // Step 2: Check if the element exists before attempting to remove it
+            if (elementToRemove) {
+                // Step 3: Remove the element from the DOM
+                elementToRemove.remove();
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!-- ************************* Creating and Appending Elements ************************** -->
+
+<!-- Task 4: Create a new li element and add it to an existing ul list. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <h1>Add Language to Existing List</h1>
+
+    <ul id="myList">
+        <li>Python</li>
+        <li>JavScript</li>
+        <li>Java</li>
+    </ul>
+
+
+    <script>
+        // Step 1: Create a new li element
+        const newLi = document.createElement('li');
+
+        // Step 2: Set text content for the li
+        newLi.textContent = "TypeScript";
+
+        // Step 3: Get the existing ul list by its id
+        const ul = document.getElementById('myList');
+
+        // Step 4: Append the new li to the ul list
+        ul.appendChild(newLi);
+    </script>
+</body>
+
+</html>

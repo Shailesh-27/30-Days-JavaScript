@@ -1,0 +1,39 @@
+<!-- ************************* Modifying Attributes and Classes ************************** -->
+
+<!-- Task 8: Add and remove a CSS class to/from an HTML element.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+
+<body>
+    <h1>Add and Remove CSS Class Example</h1>
+
+    <p id="myParagraph">This is a paragraph.</p>
+
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+
+
+    <script>
+        // Function to add a CSS class to an element
+        function addClass() {
+            const element = document.getElementById('myParagraph');
+            element.classList.add('highlight');
+        }
+
+        // Function to remove a CSS class from an element
+        function removeClass() {
+            const element = document.getElementById('myParagraph');
+            element.classList.remove('highlight');
+        }
+    </script>
+</body>
+
+</html>

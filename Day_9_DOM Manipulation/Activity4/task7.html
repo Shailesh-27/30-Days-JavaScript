@@ -1,0 +1,36 @@
+<!-- ************************* Modifying Attributes and Classes ************************** -->
+
+<!-- Task 7: Select an HTML element and change one of its attribute (eg. src of an img tag). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+
+<body>
+    <h1>Change Attribute Example</h1>
+
+    <img id="myImage" src="image.jpg" alt="Original Image" height="300px" width="300px">
+
+    <button onclick="changeImageSrc()">Change Image Source</button>
+
+
+    <script>
+        function changeImageSrc() {
+            // Step 1: Select the img element by its id
+            const imgElement = document.getElementById('myImage');
+
+            // Step 2: Check if the img element exists
+            if (imgElement) {
+                // Step 3: Change the src attribute
+                imgElement.src = 'new-image.jpg';
+            }
+        }
+    </script>
+</body>
+
+</html>

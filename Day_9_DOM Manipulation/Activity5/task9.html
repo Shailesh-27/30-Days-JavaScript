@@ -1,0 +1,35 @@
+<!-- ************************* Event Handling ************************** -->
+
+<!-- Task 9: Add a click event listener to button that changes the text content of a paragraph.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+
+<body>
+    <h1>Change Paragraph Text Example</h1>
+
+    <p id="myParagraph">Original text content.</p>
+
+    <button id="changeTextButton">Change Text</button>
+
+
+    <script>
+        const element = document.querySelector("#changeTextButton")
+
+        element.addEventListener('click', function () {
+            // Step 1: Select the paragraph element
+            const paragraph = document.getElementById('myParagraph');
+
+            // Step 2: Change the text content
+            paragraph.textContent = 'New text content after clicking the button!';
+        })
+    </script>
+</body>
+
+</html>
