@@ -1,0 +1,54 @@
+<!-- ************************* Event Delegation ************************** -->
+
+<!-- Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+
+<body>
+    <div id="parentElement">
+        <button id="addButton">Add Child Element</button>
+        <ul id="childList">
+            <!-- Initially empty, dynamically added list items will go here -->
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the parent element that will contain dynamically added children
+            const parentElement = document.getElementById('parentElement');
+
+            // Add event listener for clicks on the parent element
+            parentElement.addEventListener('click', function (event) {
+                // Check if the clicked element is a button with id "addButton"
+                if (event.target.id === 'addButton') {
+                    // Call a function to add a new item dynamically
+                    addListItem();
+                }
+
+                // Check if the clicked element is an <li> within the <ul> with id "childList"
+                if (event.target.tagName === 'LI' && event.target.parentNode.id === 'childList') {
+                    // Log the text content of the clicked <li>
+                    console.log(event.target.textContent);
+                }
+            });
+
+            // Function to add a new list item dynamically
+            function addListItem() {
+                const childList = document.getElementById('childList');
+                const newItem = document.createElement('li');
+                newItem.textContent = 'New Item';
+                childList.appendChild(newItem);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!-- ************************* Keyboard Events ************************** -->
+
+<!-- Task 6: Add a keyup event listener to an input field that display the current value in a paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="userInput">Type something:</label>
+    <input type="text" id="userInput">
+    <p id="displayText"></p>
+
+    <script>
+        // Get the input element by its ID
+        const userInput = document.getElementById('userInput');
+        // Get the paragraph element where we will display the input value
+        const displayText = document.getElementById('displayText');
+
+        // Add keyup event listener to the input field
+        userInput.addEventListener('keyup', function () {
+            // Display the current input value in the paragraph
+            displayText.textContent = userInput.value;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!-- ************************* Form Events ************************** -->
+
+<!-- Task 8: Add a change event listener to a select dropdown that displays the selected value in a paragraph.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="selectOption">Choose a Favourite Language:</label>
+    <select id="selectOption">
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="C++">C++</option>
+    </select>
+    <p id="selectedOption"></p>
+
+
+    <script>
+        // Get the select element by its ID
+        const selectOption = document.getElementById('selectOption');
+        // Get the paragraph element where we will display the selected value
+        const selectedOption = document.getElementById('selectedOption');
+
+        // Add change event listener to the select dropdown
+        selectOption.addEventListener('change', function () {
+            // Display the selected value in the paragraph
+            selectedOption.textContent = 'Selected option: ' + selectOption.value;
+        });
+    </script>
+</body>
+
+</html>

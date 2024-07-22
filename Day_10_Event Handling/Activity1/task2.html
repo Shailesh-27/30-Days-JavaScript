@@ -1,0 +1,41 @@
+<!-- ************************* Basic Event Handling ************************** -->
+
+<!-- Task 2: Add a double-click event listener to an image that toggles its visibility. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double click event</title>
+    <style>
+        img {
+            width: 300px;
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Double click on the image to toggle its visibility:</p>
+    <img id="toggleImage" src="./image.jpg" alt="Placeholder image">
+
+    <script>
+        // Get the image element
+        const toggleImage = document.getElementById('toggleImage');
+
+        // Add double click event listener to the image
+        toggleImage.addEventListener('dblclick', function () {
+            if (toggleImage.style.opacity === '0') {
+                toggleImage.style.opacity = '1'
+            }
+            else {
+                toggleImage.style.opacity = '0'
+            }
+        })
+
+    </script>
+</body>
+
+</html>

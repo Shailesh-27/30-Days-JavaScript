@@ -1,0 +1,57 @@
+<!-- ************************* Mouse Events ************************** -->
+
+<!-- Task 3: Add a mouseover event listener to an element that changes its background color. -->
+
+<!-- Task 4: Add a mouseout event listener to an element that reset its background color. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+
+        .color-box {
+            width: 300px;
+            height: 300px;
+            background-color: #173B45;
+            border: 2px solid black;
+            line-height: 250px;
+            text-align: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.4s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="color-box" id="box">Hover over me!</div>
+
+
+    <script>
+        // Get the element by its class or ID
+        const box = document.getElementById('box');
+
+        // Add mouseover event listener to the element
+        box.addEventListener('mouseover', function () {
+            box.style.backgroundColor = '#B43F3F',
+                box.style.color = 'white'
+        })
+
+        // Add mouseout event listener to revert back the background color
+        box.addEventListener('mouseout', function () {
+            box.style.backgroundColor = '#173B45'
+            box.style.color = 'black'
+
+        })
+    </script>
+</body>
+
+</html>
