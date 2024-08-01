@@ -1,0 +1,39 @@
+<!-- ************************ Understanding LocalStorage **************************
+
+
+Task 2: Write a script to save an object to localstorage by converting it to a JSON string. Retrieve and parse the object, then log it. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+
+    <script>
+        const myObject = {
+            name: 'Shailesh',
+            age: 23,
+            State: 'Gujarat',
+        };
+
+        // Convert the object to a JSON string and save it to localStorage
+        localStorage.setItem('personObject', JSON.stringify(myObject))
+
+        const retrievedJSON = localStorage.getItem('personObject')
+
+        // Parse the JSON string back into an object
+        const retrievedObject = JSON.parse(retrievedJSON)
+
+        console.log(retrievedObject);
+        console.log(retrievedJSON);
+
+    </script>
+</body>
+
+</html>

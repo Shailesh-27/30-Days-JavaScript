@@ -1,0 +1,29 @@
+<!-- ************************ Understanding LocalStorage **************************
+
+
+Task 1: Write a script to save a string value to localStorage and retrieve it. Log the retrieved value. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+
+    <script>
+        // Save a string value to localStorage
+        localStorage.setItem('name', 'Shailesh Prajapati');
+
+        // Retrieve the string value from localStorage
+        const userName = localStorage.getItem('name');
+
+        console.log(userName);
+    </script>
+</body>
+
+</html>

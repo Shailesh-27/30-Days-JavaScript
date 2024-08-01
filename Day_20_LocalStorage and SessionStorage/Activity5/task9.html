@@ -1,0 +1,44 @@
+<!-- ************************ Comparing LocalStorage and SessionStorage **************************
+
+
+Task 9: Write a function that accepts a key and a value, and saves the value to both localstorage and sessionStorage. Retrieve and log the values from both storage mechanisms. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage and SessionStorage Example</title>
+</head>
+
+<body>
+    <h1>LocalStorage and SessionStorage Example</h1>
+
+    <script>
+
+        function saveAndLog(key, value) {
+            // Save to localStorage
+            localStorage.setItem(key, value);
+            console.log(`Saved to localStorage: ${key} = ${value}`);
+
+            // Save to sessionStorage
+            sessionStorage.setItem(key, value);
+            console.log(`Saved to sessionStorage: ${key} = ${value}`);
+
+            // Retrieve from localStorage
+            const localValue = localStorage.getItem(key);
+            console.log(`Retrieved from localStorage: ${key} = ${localValue}`);
+
+            // Retrieve from sessionStorage
+            const sessionValue = sessionStorage.getItem(key);
+            console.log(`Retrieved from sessionStorage: ${key} = ${sessionValue}`);
+        }
+
+        // Example usage
+        saveAndLog('name', 'Shailesh');
+    </script>
+</body>
+
+</html>

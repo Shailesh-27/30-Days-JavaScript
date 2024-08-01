@@ -1,0 +1,42 @@
+<!-- ************************ Understanding SessionStorage **************************
+
+
+Task 6: Write a script to save an object to sessionStorage by converting it to a JSON string. Retrieve and parse the object, then log it. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage Object</title>
+</head>
+
+<body>
+    <h1>SessionStorage Object Example</h1>
+
+    <script>
+        // Step 1: Create an object
+        const myObject = {
+            name: 'Shailesh',
+            age: 23,
+            State: 'Gujarat',
+        };
+
+        // Step 2: Convert the object to a JSON string and save it to sessionStorage
+        sessionStorage.setItem('myObjectKey', JSON.stringify(myObject));
+
+        // Step 3: Retrieve the JSON string from sessionStorage
+        const retrievedJSON = sessionStorage.getItem('myObjectKey');
+
+        // Step 4: Parse the JSON string back into an object
+        const retrievedObject = JSON.parse(retrievedJSON);
+
+        // Step 5: Log the retrieved object to the console
+        console.log(retrievedObject);
+    </script>
+
+</body>
+
+</html>

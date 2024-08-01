@@ -1,0 +1,52 @@
+<!-- ************************ Comparing LocalStorage and SessionStorage **************************
+
+
+Task 10: Write a function that clears all data from both localstorage and sessionStorage. Verify that both storages are empty. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Storage Example</title>
+</head>
+
+<body>
+    <h1>Clear Storage Example</h1>
+
+    <script>
+
+        function clearAndVerifyStorage() {
+            // Clear all data from localStorage
+            localStorage.clear();
+            console.log('Cleared all data from localStorage.');
+
+            // Clear all data from sessionStorage
+            sessionStorage.clear();
+            console.log('Cleared all data from sessionStorage.');
+
+            // Verify localStorage is empty
+            console.log('Verifying localStorage:');
+            if (localStorage.length === 0) {
+                console.log('localStorage is empty.');
+            } else {
+                console.log('localStorage is not empty.');
+            }
+
+            // Verify sessionStorage is empty
+            console.log('Verifying sessionStorage:');
+            if (sessionStorage.length === 0) {
+                console.log('sessionStorage is empty.');
+            } else {
+                console.log('sessionStorage is not empty.');
+            }
+        }
+
+        // Example usage
+        clearAndVerifyStorage();
+    </script>
+</body>
+
+</html>

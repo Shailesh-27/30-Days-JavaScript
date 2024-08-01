@@ -1,0 +1,48 @@
+<!-- ************************ Using SessionStorage **************************
+
+
+Task 8: Write a script to remove an item from sessionStorage. Log the sessionStorage content before and after removal. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage Remove Example</title>
+</head>
+
+<body>
+    <h1>SessionStorage Remove Example</h1>
+
+    <script>
+        // Function to log the current sessionStorage content
+        function logSessionStorageContent() {
+            console.log('Current sessionStorage content:');
+            for (let i = 0; i < sessionStorage.length; i++) {
+                const key = sessionStorage.key(i);
+                const value = sessionStorage.getItem(key);
+                console.log(`${key}: ${value}`);
+            }
+        }
+
+        // Add some items to sessionStorage for demonstration
+        sessionStorage.setItem('item1', 'Value 1');
+        sessionStorage.setItem('item2', 'Value 2');
+        sessionStorage.setItem('item3', 'Value 3');
+
+        // Log the content before removal
+        console.log('Before removal:');
+        logSessionStorageContent();
+
+        // Remove an item from sessionStorage
+        sessionStorage.removeItem('item2');
+
+        // Log the content after removal
+        console.log('After removal:');
+        logSessionStorageContent();
+    </script>
+</body>
+
+</html>

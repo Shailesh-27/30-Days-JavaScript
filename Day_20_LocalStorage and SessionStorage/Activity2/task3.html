@@ -1,0 +1,111 @@
+<!-- ************************ Using LocalStorage **************************
+
+
+Task 3: Create a simple form that saves user input (e.g., name and email) to localStorage when submitted. Retrieve and display the saved data on page load. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Form Data to LocalStorage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Save User Data</h1>
+    <form id="userForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+    <div class="result" id="result"></div>
+
+
+    <script>
+        // Function to save form data to localStorage
+        function saveFormData() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            // Create an object with form data
+            const userData = {
+                name: name,
+                email: email
+            };
+            // Save the object to localStorage as a JSON string
+            localStorage.setItem('userData', JSON.stringify(userData));
+        }
+
+        function displaySavedData() {
+            // Retrieve the JSON string from localStorage
+            const savedData = localStorage.getItem('userData');
+
+            if (savedData) {
+                // Parse the JSON string into an object
+                const userData = JSON.parse(savedData);
+
+                document.getElementById('result').innerHTML = `
+                    <h2>Saved Data:</h2>
+                    <p><strong>Name:</strong> ${userData.name}</p>
+                    <p><strong>Email:</strong> ${userData.email}</p>
+                `;
+            }
+        }
+
+        // Add an event listener for form submission
+        document.getElementById('userForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting the default way
+            saveFormData();
+        });
+
+        // Display saved data when the page loads
+        window.addEventListener('load', displaySavedData);
+    </script>
+</body>
+
+</html>
